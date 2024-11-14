@@ -19,12 +19,17 @@ export type PlayerProfileProps = ViewProps & { data: PlayerProfile };
 export type PlayerProfile = {
   no: number;
   birthday: string;
-  physical_info: any;
+  physical_info: PlayerPhysicalInfo;
   grade: string;
   highschool: string;
   img: string;
   position: string;
   name: string;
+};
+
+type PlayerPhysicalInfo = {
+  height: string;
+  weight: string;
 };
 
 export default function PlayerProfile({ data, style }: PlayerProfileProps) {

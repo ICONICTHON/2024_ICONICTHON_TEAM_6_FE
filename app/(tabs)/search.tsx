@@ -74,7 +74,14 @@ export default function Player() {
       >
         <Text>순위 확인하기</Text>
       </TouchableOpacity>
-      <Text style={[styles.text2, styles.textTypo]}>지도자 · 선수 찾기</Text>
+      <TouchableOpacity
+        onPress={() => {
+          router.navigate("/pages/player/playerList");
+        }}
+        style={[styles.textTypo]}
+      >
+        <Text style={[styles.text2]}>지도자 · 선수 찾기</Text>
+      </TouchableOpacity>
       <View style={[styles.trophyWrapper, styles.frameIconLayout]}>
         <Image
           style={[styles.trophyIcon, styles.childPosition]}

@@ -27,13 +27,18 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 export default function Player() {
   const { playerId } = useLocalSearchParams<{ playerId: string }>();
   const [playerData, setPlayerData] = useState(null);
+  const [playerPf, setPlayerPf] = useState(null);
   const [playerType, setPlayerType] = useState(0);
   const [favorite, setFavorite] = useState(false);
 
   useEffect(() => {
     const fetch = async () => {
       let res = await apiGet(`/api/v1/player/record/${playerId}`);
+      let res2 = await apiGet(`/api/v1/player/profile/${playerId}`);
       console.log(res.body);
+      console.log(res2.body);
+
+      setPlayerPf(res2.body);
       setPlayerData(res.body);
 
       // console.log(res.body);
@@ -43,19 +48,19 @@ export default function Player() {
 
   useEffect(() => {
     console.log(playerData);
-    if (playerData == null) {
+    if (playerPf == null) {
       setPlayerType(0);
-    } else if (playerData.sports_type == "baseball" && playerData.tuta == 0) {
+    } else if (playerPf.sports_type == "baseball" && playerPf.tuta == 0) {
       setPlayerType(1);
-    } else if (playerData.sports_type == "baseball" && playerData.tuta == 1) {
+    } else if (playerPf.sports_type == "baseball" && playerPf.tuta == 1) {
       setPlayerType(2);
-    } else if (playerData.sports_type == "basketball") {
+    } else if (playerPf.sports_type == "basketball") {
       setPlayerType(3);
-    } else if (playerData.sports_type == "soccer") {
+    } else if (playerPf.sports_type == "soccer") {
       setPlayerType(4);
     }
     console.log(playerType);
-  }, [playerData]);
+  }, [playerPf]);
 
   // let stats;
   // if (playerData == null) {
@@ -113,7 +118,7 @@ export default function Player() {
         }}
       />
       <ScrollView style={{ flex: 1 }}>
-        <PlayerProfile data={playerData} />
+        <PlayerProfile data={playerPf} />
         {playerType == null && (
           <View
             style={{

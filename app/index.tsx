@@ -4,6 +4,6 @@ import { initializeKakaoSDK } from "@react-native-kakao/core";
 const Index = () => {
   initializeKakaoSDK(process.env.EXPO_PUBLIC_KAKAO_NATIVE_KEY || "");
 
-  return <Redirect href="/welcome" />;
+  return <Redirect href="/pages/player/playerList" />;
 };
 export default Index;

@@ -78,7 +78,7 @@ export default function PostCardFull({
         {description}
       </Text>
       <Text style={[styles.text1, styles.textPosition]}>
-        {sportsS}게시판ㆍ{dateD.getMonth() + 1}월 {dateD.getDate()}일
+        {sportsS}게시판ㆍ 11월 15일
       </Text>
       <Text
         style={[

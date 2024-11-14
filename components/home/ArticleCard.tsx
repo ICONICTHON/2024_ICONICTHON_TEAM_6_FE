@@ -61,12 +61,12 @@ export function ArticleCard({
       <Text style={[styles.text20, styles.textTypo3]} numberOfLines={3}>
         {description}
       </Text>
-      <Image
+      {/* <Image
         style={[styles.frameItem, styles.frameItemLayout]}
         resizeMode="cover"
         source={require("../../assets/pngs/frame-1000003967.png")}
-      />
-      <View style={[styles.view1, styles.viewParentFlexBox]}>
+      /> */}
+      {/* <View style={[styles.view1, styles.viewParentFlexBox]}>
         <Image
           style={styles.ucommentAltIcon}
           resizeMode="cover"
@@ -81,7 +81,7 @@ export function ArticleCard({
           source={require("../../assets/pngs/uheartalt.png")}
         />
         <Text style={[styles.text21, styles.textTypo2]}>{likeNum}</Text>
-      </View>
+      </View> */}
     </TouchableOpacity>
   );
 }

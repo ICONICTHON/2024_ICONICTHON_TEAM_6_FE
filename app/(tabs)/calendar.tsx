@@ -62,7 +62,7 @@ LocaleConfig.locales["ko"] = {
 LocaleConfig.defaultLocale = "ko";
 
 export default function Event() {
-  const [pickedDate, setPickedDate] = useState(new Date(2024, 5, 8));
+  const [pickedDate, setPickedDate] = useState(new Date(2024, 8, 5));
   const [pickedMonth, setPickedMonth] = useState(pickedDate.getMonth() + 1);
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
