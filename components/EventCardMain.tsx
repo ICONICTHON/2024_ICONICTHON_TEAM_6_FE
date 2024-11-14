@@ -9,7 +9,7 @@ import {
 
 import { useThemeColor } from "@/hooks/useThemeColor";
 import { Border, Color, FontFamily, FontSize } from "@/constants/GlobalStyles";
-import donggukImage from "../../assets/pngs/rectangle-9805.png";
+import donggukImage from "../assets/pngs/rectangle-9805.png";
 
 export type EventCardMainProps = TextProps & {
   lightColor?: string;
