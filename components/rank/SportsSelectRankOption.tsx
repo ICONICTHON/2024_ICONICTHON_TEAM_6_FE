@@ -48,7 +48,7 @@ export default function SportsSelectRankOption({
           title: "농구 순위",
           titleColor: "#2367A2",
           image: Platform.select({
-            ios: "plus",
+            ios: "chevron.right.circle",
             android: "ic_menu_add",
           }),
           imageColor: "#2367A2",
@@ -58,7 +58,7 @@ export default function SportsSelectRankOption({
           title: "야구 순위",
           titleColor: "#2367A2",
           image: Platform.select({
-            ios: "plus",
+            ios: "chevron.right.circle",
             android: "ic_menu_add",
           }),
           imageColor: "#2367A2",
@@ -68,7 +68,7 @@ export default function SportsSelectRankOption({
           title: "축구 순위",
           titleColor: "#2367A2",
           image: Platform.select({
-            ios: "plus",
+            ios: "chevron.right.circle",
             android: "ic_menu_add",
           }),
           imageColor: "#2367A2",

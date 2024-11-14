@@ -71,7 +71,7 @@ export default function Event() {
     { label: "야구", value: 1 },
     { label: "농구", value: 2 },
     { label: "축구", value: 3 },
-    { label: "내 캘린더", value: 4 },
+    // { label: "내 캘린더", value: 4 },
   ]);
   const [events, setEvents] = useState([]);
 

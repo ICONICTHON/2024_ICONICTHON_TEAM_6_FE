@@ -67,11 +67,11 @@ export default function EventCardSub({
           <Text style={[styles.text5, styles.vsTypo]}>{teams[1]}</Text>
         </View>
       </View>
-      <Image
+      {/* <Image
         style={styles.uplusCircleIcon}
         resizeMode="cover"
         source={require("../assets/pages/calendar/upluscircle1.png")}
-      />
+      /> */}
     </TouchableOpacity>
   );
 }
