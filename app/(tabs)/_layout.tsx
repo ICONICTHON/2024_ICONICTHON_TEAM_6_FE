@@ -63,6 +63,26 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="search"
+        options={{
+          title: "선수정보",
+          tabBarIcon: ({ color, focused }) => (
+            <View
+              style={
+                focused ? styles.propertyStatusfocus : styles.propertyPosition
+              }
+            >
+              <Image
+                style={{ width: 24, height: 24, overflow: "hidden" }}
+                resizeMode="cover"
+                source={require("../../assets/pages/tab/u_credit-card-search.png")}
+              />
+              <Text style={styles.text}>선수정보</Text>
+            </View>
+          ),
+        }}
+      />
     </Tabs>
   );
 }
