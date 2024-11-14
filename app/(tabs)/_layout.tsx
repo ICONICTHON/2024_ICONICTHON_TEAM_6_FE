@@ -1,7 +1,6 @@
 import { Tabs } from "expo-router";
 import React from "react";
 
-import { TabBarIcon } from "@/components/navigation/TabBarIcon";
 import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { Image, StyleSheet, Text, View } from "react-native";
@@ -40,6 +39,26 @@ export default function TabLayout() {
                 source={require("../../assets/pages/tab/u_home-alt.png")}
               />
               <Text style={styles.text}>홈</Text>
+            </View>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="calendar"
+        options={{
+          title: "경기일정",
+          tabBarIcon: ({ color, focused }) => (
+            <View
+              style={
+                focused ? styles.propertyStatusfocus : styles.propertyPosition
+              }
+            >
+              <Image
+                style={{ width: 24, height: 24, overflow: "hidden" }}
+                resizeMode="cover"
+                source={require("../../assets/pages/tab/u_calendar-alt.png")}
+              />
+              <Text style={styles.text}>경기일정</Text>
             </View>
           ),
         }}
