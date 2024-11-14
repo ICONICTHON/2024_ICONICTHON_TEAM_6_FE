@@ -1,12 +1,9 @@
-import { Key, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Text,
   StyleSheet,
   View,
-  Image,
   ScrollView,
-  Button,
-  Platform,
   ActivityIndicator,
 } from "react-native";
 
@@ -18,7 +15,6 @@ import {
   Border,
 } from "../../../constants/GlobalStyles";
 import { HeaderButtons } from "react-navigation-header-buttons";
-import { MenuView } from "@react-native-menu/menu";
 import { router, Stack, useNavigation } from "expo-router";
 import BasketballRankCard from "@/components/rank/BasketballRankCard";
 import SportsSelectRankOption from "@/components/rank/SportsSelectRankOption";

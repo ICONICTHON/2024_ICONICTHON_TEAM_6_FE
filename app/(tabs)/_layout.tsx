@@ -44,6 +44,26 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="community"
+        options={{
+          title: "게시판",
+          tabBarIcon: ({ color, focused }) => (
+            <View
+              style={
+                focused ? styles.propertyStatusfocus : styles.propertyPosition
+              }
+            >
+              <Image
+                style={{ width: 24, height: 24, overflow: "hidden" }}
+                resizeMode="cover"
+                source={require("../../assets/pages/tab/u_comment.png")}
+              />
+              <Text style={styles.text}>게시판</Text>
+            </View>
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="calendar"
         options={{
           title: "경기일정",
